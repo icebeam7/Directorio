@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Directorio.Paginas.PaginaDetalleContacto">
+    <ContentPage.Content>
+        <StackLayout Margin="16,20">
+            <Entry x:Name="EntryNombre"
+               Style="{StaticResource EstiloEntry}"
+               Placeholder="Nombre del contacto"/>
+            <Entry x:Name="EntryNumero"
+                Style="{StaticResource EstiloEntry}"
+                Placeholder="Número telefónico"/>
+            <Button x:Name="ButtonGuardar"
+                Text="Guardar"
+                Clicked="ButtonGuardar_Clicked"
+                Style="{StaticResource EstiloBoton}"/>
+
+            <Button x:Name="ButtonCamara"
+                Text="Tomar fotografía"
+                Clicked="ButtonCamara_Clicked"
+                Style="{StaticResource EstiloBoton}"/>
+            <Image x:Name="Fotografia" 
+                   WidthRequest="300"
+                   HeightRequest="300"/>
+            <Button x:Name="ButtonAnalizar"
+                Text="Analizar"
+                Clicked="ButtonAnalizar_Clicked"
+                Style="{StaticResource EstiloBoton}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

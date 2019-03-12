@@ -21,7 +21,11 @@ namespace Directorio.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Directorio.App());
+            string archivo = "ContactosBD.db3";
+            string carpeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
+            string ruta = System.IO.Path.Combine(carpeta, archivo);
+
+            LoadApplication(new Directorio.App(ruta));
         }
     }
 }

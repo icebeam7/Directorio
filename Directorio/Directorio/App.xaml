@@ -3,6 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Directorio.App">
     <Application.Resources>
+        <Color x:Key="ColorClaro">#EEEEEE</Color>
+        <Color x:Key="ColorOscuro">#1C1C1C</Color>
+        <Color x:Key="ColorPrincipal">#4392F1</Color>
+        <Color x:Key="ColorSecundario">#BFBFBF</Color>
 
+        <Style TargetType="Button" x:Key="EstiloBoton">
+            <Setter Property="BackgroundColor" Value="{StaticResource ColorPrincipal}"/>
+            <Setter Property="TextColor" Value="{StaticResource ColorClaro}"/>
+        </Style>
+        <Style TargetType="Entry" x:Key="EstiloEntry">
+            <Setter Property="PlaceholderColor" Value="{StaticResource ColorSecundario}"/>
+            <Setter Property="TextColor" Value="{StaticResource ColorOscuro}"/>
+        </Style>
     </Application.Resources>
 </Application>

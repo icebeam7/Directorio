@@ -7,6 +7,17 @@ namespace Directorio
 {
     public partial class App : Application
     {
+        public static string RutaBD;
+
+        public App(string rutaBD)
+        {
+            InitializeComponent();
+
+            RutaBD = rutaBD;
+
+            MainPage = new NavigationPage(new Paginas.PaginaListaContactos());
+        }
+
         public App()
         {
             InitializeComponent();

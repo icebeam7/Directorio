@@ -23,7 +23,12 @@ namespace Directorio.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            
+            string archivo = "ContactosBD.db3";
+            string carpeta = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "..", "Library");
+            string ruta = System.IO.Path.Combine(carpeta, archivo); 
+
+            LoadApplication(new App(ruta));
 
             return base.FinishedLaunching(app, options);
         }

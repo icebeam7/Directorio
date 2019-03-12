@@ -19,7 +19,12 @@ namespace Directorio.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+
+            string archivo = "ContactosBD.db3";
+            string carpeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string ruta = System.IO.Path.Combine(carpeta, archivo); 
+
+            LoadApplication(new App(ruta));
         }
     }
 }
