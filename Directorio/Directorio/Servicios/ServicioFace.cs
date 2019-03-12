@@ -10,7 +10,7 @@ namespace Directorio.Servicios
 {
     public static class ServicioFace
     {
-        static string key = "llave";
+        static string key = "";
         static string endpoint = "https://westeurope.api.cognitive.microsoft.com/";
         // sin la version
 
